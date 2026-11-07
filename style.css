@@ -1,0 +1,267 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --primary-color: #b3006e;
+    --primary-hover: #27001a;
+    --secondary-color: #b3006e;
+    --secondary-hover: #c705e0;
+    --background-color: #f4f6f8;
+    --card-background: #ffffff;
+    --text-color: #333333;
+    --border-color:#e5e7eb;
+    --error-color: #dc2626;
+    --success-color: #16a34a;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.header {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 2rem 0;
+    text-align: center;
+}
+.header__title {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+.header__tagline {
+    font-weight: 300;
+}
+.nav {
+    background-color: #6d022e;
+    padding: 0.75rem 0;
+}
+.nav__container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.nav__link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav__link:hover {
+    color: #d024fb;
+}
+
+.main {
+    padding: 2rem 0;
+}
+.section {
+    background: var(--card-background);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+
+}
+.section_title {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+.search-box {
+    margin-bottom: 1.5rem;
+}
+.search-box__label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+.search-box__input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+}
+.villa-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+.villa-card {
+    background: #ffffff;
+    border:1px solid var(--background-color);
+    border-radius: 8px;
+    padding:1.5rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.villa-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+.villa-card__title {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+.villa-card__type {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+}
+.villa-card__price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+.villa-card__facilities {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+.villa-card__badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius:4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    align-self: flex-start;
+}
+.villa-card__badge--available {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+.form__group {
+    display: flex;
+    flex-direction: column;
+}
+.form__group-rom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+.form__label {
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+.form__input,
+.form__select {
+    padding: 0.75rem;
+    border:1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+}
+.form__actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: #ffffff;
+}
+.btn--primary {
+    background-color: var(--primary-color);
+    color:#ffffff;
+}
+.btn--primary:hover {
+    background-color: var(--primary-hover);
+}
+.btn--secondary {
+    background-color: var(--secondary-color);
+}
+.btn--secondary:hover {
+    background-color: var(--secondary-hover);
+}
+
+.alert {
+    padding: 1rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+.alert--danger {
+    background-color: #fee2e2;
+    color: var(--error-color);
+    border: 1px solid #fca5a5;
+}
+.summary-card {
+    background-color: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    padding: 1.25rem;
+    border-radius: 6px;
+}
+.summary-card__title {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+.summary-card__total {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    color: var(--secondary-color);
+}
+.result-box {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background-color: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 6px ;
+}
+.hidden {
+    display: none !important;
+}
+.footer {
+    background-color: #1f2937;
+    color: #9ca3af;
+    padding: 2rem 0;
+    text-align: center;
+}
+.footer__title {
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+.footer__copyright {
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 480px) {
+    .villa-grid {
+        grid-template-columns: 1fr;
+    }
+    .form__group-row {
+        grid-template-columns: 1fr;
+    }
+    .form__actions {
+        flex-direction: column;
+    }
+    .header__title {
+        font-size: 1.8rem;
+    }
+}
